@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* THEME VARS */
+
+
+:root{
+  --color-bg:#F8FAFC;
+  --color-surface:#FFFFFF;
+  --color-text:#0A0A0A;
+  --color-accent:#2563EB;
+}
+:root.dark{
+  --color-bg:#0F172A;
+  --color-surface:#1E293B;
+  --color-text:#E2E8F0;
+  --color-accent:#60A5FA;
+}
+
+
+/* Reusable bits */
+@layer components{
+  .input{@apply w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-[var(--color-surface)] px-3.5 py-2.5 text-[0.95rem] outline-none shadow-sm;}
+  .input:focus{@apply ring-4; --tw-ring-color:var(--color-accent); border-color:var(--color-accent);}
+  .btn-ghost{@apply rounded-xl border border-slate-300 dark:border-slate-700 px-3 py-2 bg-[var(--color-surface)];}
+  .btn-primary{@apply rounded-xl px-3 py-2 text-white font-medium shadow hover:brightness-110; background:var(--color-accent);}
+  .card{@apply rounded-2xl border border-slate-200/70 dark:border-slate-700/70 bg-[var(--color-surface)] p-4;}
+}
+
+.bg-bg{background:var(--color-bg);}
+.text-text{color:var(--color-text);}
+.text-accent{color:var(--color-accent);}
